@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Monetized & Views | TikTok Growth Service</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --bg-color: #0b0612;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border-glow: rgba(255, 255, 255, 0.15);
+            --tiktok-pink: #ff0050;
+            --tiktok-cyan: #00f2fe;
+            --easypaisa-green: #39b54a;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* BACKGROUND GLOW ANIMATIONS */
+        .glow-sphere-1, .glow-sphere-2 {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: 0;
+            animation: pulse 6s infinite alternate ease-in-out;
+        }
+
+        .glow-sphere-1 {
+            width: 350px;
+            height: 350px;
+            background: var(--tiktok-pink);
+            top: 10%;
+            left: 10%;
+            opacity: 0.35;
+        }
+
+        .glow-sphere-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--tiktok-cyan);
+            bottom: 10%;
+            right: 10%;
+            opacity: 0.3;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.2) translate(30px, 20px); }
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 950px;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glow);
+            border-radius: 24px;
+            padding: 40px 30px;
+            z-index: 1;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* HEADER SECTION */
+        .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--tiktok-pink), var(--tiktok-cyan));
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(255, 0, 80, 0.4);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, #b3b3b3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        /* CONTENT GRID */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 25px;
+            text-align: left;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-title span {
+            color: var(--tiktok-cyan);
+        }
+
+        /* SERVICES LIST */
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            font-size: 1rem;
+            color: #ddd;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-list li::before {
+            content: "✓";
+            color: var(--tiktok-pink);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* PAYMENT CARD STYLING */
+        .easypaisa-card {
+            background: linear-gradient(135deg, rgba(57, 181, 74, 0.15), rgba(0, 0, 0, 0.4));
+            border: 1px solid rgba(57, 181, 74, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .easypaisa-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .easypaisa-logo {
+            background-color: var(--easypaisa-green);
+            color: #fff;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .account-box {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px dashed var(--easypaisa-green);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .account-label {
+            font-size: 0.8rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .account-number {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+
+        .pay-now-btn {
+            display: block;
+            width: 100%;
+            background: var(--easypaisa-green);
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            margin-top: 12px;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .pay-now-btn:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        /* FORM STYLING FOR PAYMENT SUBMISSION */
+        .payment-form-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            padding: 25px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 6px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: var(--tiktok-cyan);
+        }
+
+        /* CALL TO ACTION BUTTON */
+        .cta-button {
+            display: inline-block;
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(90deg, var(--tiktok-pink), var(--tiktok-cyan));
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: opacity 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 0, 80, 0.3);
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+            box-shadow: 0 8px 30px rgba(0, 242, 254, 0.5);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 25px 18px; }
+            .account-number { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background glowing shapes -->
+    <div class="glow-sphere-1"></div>
+    <div class="glow-sphere-2"></div>
+
+    <!-- Main Web Display Container -->
+    <div class="container">
+
+        <!-- Header -->
+        <span class="badge">Trusted TikTok Service</span>
+        <h1>Get Monetized & Views</h1>
+        <p class="subtitle">Turn your TikTok content into cash — 100% Guaranteed Monetization & High Views</p>
+
+        <!-- Main Info Cards -->
+        <div class="grid-layout">
+            
+            <!-- Features Card -->
+            <div class="card">
+                <h2 class="card-title"><span>⚡</span> Our Guaranteed Services</h2>
+                <ul class="service-list">
+                    <li>Monetize <strong>ANY</strong> TikTok Account ID</li>
+                    <li>Guaranteed High Video Views & Reach</li>
+                    <li>Fast & Safe Delivery Service</li>
+                    <li>100% Reliable & Proven Results</li>
+                </ul>
+            </div>
+
+            <!-- Payment Receiving Card -->
+            <div class="card easypaisa-card">
+                <div class="easypaisa-header">
+                    <h2 class="card-title" style="margin: 0;"><span>💸</span> EasyPaisa Payment</h2>
+                    <span class="easypaisa-logo">EasyPaisa</span>
+                </div>
+                <p style="font-size: 0.85rem; color: #ccc;">Send payment to our EasyPaisa account below:</p>
+                
+                <div class="account-box">
+                    <div class="account-label">EasyPaisa Account Number</div>
+                    <div class="account-number" id="accNumber">03707558291</div>
+                </div>
+
+                <!-- DIRECT EASYPAISA ACTION BUTTON -->
+                <button onclick="openEasyPaisaApp()" class="pay-now-btn">
+                    📲 Copy Number & Open EasyPaisa App
+                </button>
+            </div>
+
+        </div>
+
+        <!-- PAYMENT SUBMISSION FORM -->
+        <div class="payment-form-section">
+            <h2 class="card-title" style="margin-bottom: 15px;"><span>📝</span> Submit Order & Payment Proof</h2>
+            
+            <div class="form-group">
+                <label for="custName">Your Name:</label>
+                <input type="text" id="custName" placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="tiktokId">TikTok Username / Link:</label>
+                <input type="text" id="tiktokId" placeholder="e.g. @your_tiktok_handle">
+            </div>
+
+            <div class="form-group">
+                <label for="serviceType">Select Service Required:</label>
+                <select id="serviceType">
+                    <option value="Account Monetization">Account Monetization</option>
+                    <option value="Video Views Booster">Video Views Booster</option>
+                    <option value="Both (Monetization + Views)">Both (Monetization + Views)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="trxId">Transaction ID / Sender Name:</label>
+                <input type="text" id="trxId" placeholder="Enter EasyPaisa Transaction ID (TRX ID)">
+            </div>
+
+            <!-- Submit Button -->
+            <button onclick="sendPaymentDetails()" class="cta-button">
+                🚀 Send Payment Details to Start Immediately
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        function openEasyPaisaApp() {
+            var number = "03707558291";
+            
+            // Copy number to clipboard
+            navigator.clipboard.writeText(number).then(function() {
+                alert("Account Number (03707558291) copied! Opening EasyPaisa App...");
+            }).catch(function() {
+                // Fallback for older browsers
+            });
+
+            // Deep link attempt to open EasyPaisa app directly
+            window.location.href = "easypaisa://";
+
+            // Fallback: If EasyPaisa app doesn't open in 1.5s, redirect to app store/web
+            setTimeout(function() {
+                window.location.href = "https://easypaisa.com.pk/";
+            }, 1500);
+        }
+
+        function sendPaymentDetails() {
+            var name = document.getElementById('custName').value;
+            var tiktokId = document.getElementById('tiktokId').value;
+            var service = document.getElementById('serviceType').value;
+            var trxId = document.getElementById('trxId').value;
+
+            if(!name || !tiktokId || !trxId) {
+                alert("Please fill in your Name, TikTok ID, and Transaction ID first!");
+                return;
+            }
+
+            var message = "Hello! I have sent payment on EasyPaisa (03707558291).%0A%0A" +
+                          "*Name:* " + encodeURIComponent(name) + "%0A" +
+                          "*TikTok ID:* " + encodeURIComponent(tiktokId) + "%0A" +
+                          "*Service Requested:* " + encodeURIComponent(service) + "%0A" +
+                          "*EasyPaisa TRX ID:* " + encodeURIComponent(trxId) + "%0A%0A" +
+                          "Please process my order!";
+
+            var whatsappUrl = "https://wa.me/923707558291?text=" + message;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+
+</body>
+</html>
